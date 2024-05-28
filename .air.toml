@@ -49,3 +49,59 @@ tmp_dir = "tmp"
 [screen]
   clear_on_rebuild = false
   keep_scroll = true
+
+##############################################
+# Custom Config file for Air
+
+# Working directory
+root = "."
+
+# Watching directory, comma separated, default value is "."
+# Also supports glob patterns, e.g. "./**/*.go"
+dirs = ["./"]
+
+# Watch file extensions, default value is "go"
+extensions = ["go", "tpl", "tmpl", "html"]
+
+# Ignore files or directories
+# Separate with comma and no spaces
+ignore_dirs = ["assets", "bin", "tmp", "vendor", "node_modules"]
+
+# Notify Windows to use native file watcher (winfsp)
+notify = false
+
+# Working directory, default value is "."
+tmp_dir = "tmp"
+
+# Build file path, default value is "tmp/main"
+bin = "tmp/main"
+
+# Command to build the application, default value is "go build -o ./tmp/main ."
+cmd = "go build -o ./tmp/main ."
+
+# Logger configuration
+log = "debug"
+
+# Console colors
+colors = true
+
+# List of paths to exclude from watching. Glob patterns are allowed.
+exclude_dir = ["assets", "tmp"]
+
+# Include hidden directories in the watcher. Default value is false.
+include_hidden = false
+
+# Delay before starting rebuild (in ms). Default value is 0.
+delay = 0
+
+# Build error delay before retry (in ms). Default value is 0.
+error_delay = 0
+
+# File change event delay before rebuild (in ms). Default value is 500.
+event_delay = 500
+
+# Build output path. Default value is "tmp"
+output_path = "tmp"
+
+# PID file to store pid of this process, default value is ".air.pid"
+pid_file = ".air.pid"
