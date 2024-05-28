@@ -45,11 +45,16 @@ func addItem(c *gin.Context) {
 	c.JSON(http.StatusCreated, newItem)
 }
 
+func getAuthor(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"author":"Mario @Capitbrok"})
+}
+
 func main() {
 	r := gin.Default()
 
 	r.GET("/items", getItems)
 	r.GET("/items/:id", getItem)
+	r.GET("/author", getAuthor)
 	r.POST("/items", addItem)
 
 	r.Run(":8080")
